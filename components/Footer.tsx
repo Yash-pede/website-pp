@@ -20,11 +20,9 @@ const Footer = () => {
             </h1>
             {footerData.upper.reachUs.links.map((link, index) => {
               return (
-                <div key={index} className="flex gap-2">
-                  <Link key={index} href={"#"}>
+                  <span key={index} className="hover:text-[#1CBA9F] transition-all duration-300 cursor-pointer font-[500]">
                     {link.text}
-                  </Link>
-                </div>
+                  </span>
               );
             })}
           </div>
@@ -34,11 +32,9 @@ const Footer = () => {
             </h1>
             {footerData.upper.explore.links.map((link, index) => {
               return (
-                <div className="flex gap-2" key={index}>
-                  <Link key={index} href={link.href}>
+                  <Link key={index} href={link.href} className="hover:text-[#1CBA9F] transition-all duration-300 cursor-pointer font-[500]">
                     {link.text}
                   </Link>
-                </div>
               );
             })}
           </div>

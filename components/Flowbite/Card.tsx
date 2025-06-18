@@ -6,11 +6,14 @@ import { useState } from "react";
 
 export default function Component({
   name,
+  price,
   composition,
+  href,
 }: {
   name: string;
   price: string;
   composition: string;
+  href: string;
 }) {
   const [mouseOver, setmouseOver] = useState<boolean>(false);
 
@@ -23,15 +26,7 @@ export default function Component({
         <Image
           width={500}
           height={500}
-          src={`/products/${
-            name == "CIFIPURE-LB"
-              ? "cifipure-LB"
-              : name == "Gestopride 200SR"
-              ? "gestopride-200SR"
-              : name.includes(" ")
-              ? name.replace(" ", "-").toLowerCase()
-              : name.toLowerCase()
-          }.png`}
+          src={`/products/${href}.png`}
           alt="image 1"
         />
       )}
@@ -47,12 +42,17 @@ export default function Component({
           <BsCapsule className="scale-150" />
         </span>
       </div>
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        {name}
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        {composition}
-      </p>
+      <div className="flex flex-col my-2">
+        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white exo mb-2">
+          {name}
+        </h5>
+        <h5 className="text-2xl font-bold tracking-tight text-[#DC3545] dark:text-white exo">
+          {price}
+        </h5>
+        <p className="font-normal text-gray-700 dark:text-gray-400">
+          {composition}
+        </p>
+      </div>
     </Card>
   );
 }

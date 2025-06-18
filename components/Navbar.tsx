@@ -6,6 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { TfiAlarmClock } from "react-icons/tfi";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
+import { IoIosMail } from "react-icons/io";
 
 const Navbar = () => {
   const [isOpen, setisOpen] = useState<boolean>(false);
@@ -33,7 +34,10 @@ const Navbar = () => {
               <TfiAlarmClock />
               <span>Mon-Fri (8am - 4pm)</span>
             </div>
-            <div>purepridepharma@gmail.com</div>
+            <div className="flex items-center gap-2">
+              <IoIosMail className="scale-[1.2] mt-1" />
+              <span>purepridepharma@gmail.com</span>
+            </div>
           </div>
           <div className="max-[640px]:hidden flex items-center max-lg:justify-center h-full px-4 lg:px-16 gap-6 font-[600] text-md lg:gap-6 md:gap-4">
             <Link href={"/"}>Home</Link>
