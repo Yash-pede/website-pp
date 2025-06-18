@@ -77,7 +77,7 @@ export const products = [
   {
     name: "CIFIPURE-LB",
     price: "Rs. 125.00",
-    composition: "Cefixime & Latic Acid Bacillus Dispersible Tablets",
+    composition: "Cefixime & Lactic Acid Bacillus Dispersible Tablets",
     hightlights: [
       "Bronchitis",
       "Otisis media",
