@@ -1,13 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { services } from "@/constants/config";
-import { slideInFromLeft } from "./animations/animation";
-import { useInView } from "react-intersection-observer";
 
 const Services = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
   return (
     <section className="py-[100px] max-sm:py-[50px] flex flex-col w-full bg-white">
       <div className="w-3/4 mx-auto max-sm:w-11/12">
@@ -26,10 +21,6 @@ const Services = () => {
             const Icon = icon;
             return (
               <motion.div
-                initial="hidden"
-                animate={inView?"visible":"hidden"}
-                variants={slideInFromLeft(index * 0.2)}
-                ref={ref}
                 key={index}
                 className="lg:w-4/12 md:w-1/2 w-full py-[50px] px-[50px] max-sm:py-[30px] max-sm:px-[20px] hover:shadow-[0_0_10px_rgba(0,0,0,0.25)] transition-all duration-300"
               >
