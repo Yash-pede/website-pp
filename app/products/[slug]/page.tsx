@@ -47,9 +47,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               <div className="w-7/12 max-sm:w-full">
                 <div className="mb-4">
                   <h1 className="exo text-[28px] font-[700] text-[#222] mb-2 ">
-                    Products Details
+                    {product.name}
                   </h1>
-                  <p className="exo text-[24px] mb-2 text-[#222] ">
+                  <p className="exo text-[16px] mb-2 text-[#222] ">
                     {product.composition}
                   </p>
                   <ul className="flex flex-col gap-2">
